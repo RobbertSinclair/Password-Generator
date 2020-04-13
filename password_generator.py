@@ -91,7 +91,7 @@ class app(tk.Frame):
                 password = password + the_letter
             self.the_label.config(text=password)
             #Change the strength label to show the user the rough strength of their password
-            if value < 10:
+            if value <= 10:
                 self.strength_label.config(text="Password Strength: Weak", bg="red", fg="white")
             elif (value > 10 and value < 20) or options == (0,1,0) or options == (1,0,0):
                 self.strength_label.config(text="Password Strength: Medium", bg="yellow", fg="black")
